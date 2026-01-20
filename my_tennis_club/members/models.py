@@ -6,5 +6,5 @@ class Member(models.Model):
     # 列名　＝　データ型クラス(VARCHAR(255))
     firstname = models.CharField(max_length=255)
     lastname = models.CharField(max_length=255)
-    phone = models.IntegerField(null=True)
+    phone = models.IntegerField(null=True) # 空データOK
     joined_date = models.DateField(null=True)
