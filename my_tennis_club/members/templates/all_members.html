@@ -1,3 +1,5 @@
+<!--members/templates/all_members.html-->
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -7,7 +9,8 @@
 <ul>
    {% for x in mymembers %}
       <li>{{ x.firstname }} {{ x.lastname }}</li>
-   {% endfor %}
+   {% endfor %} 
+   <!--{% endfor %}これでfor文の終わり-->
 </ul>
     
 </body>
