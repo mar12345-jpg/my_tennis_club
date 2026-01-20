@@ -1,1 +1,23 @@
+# 仮想環境
 myworld/
+venv/
+
+# Python のキャッシュ
+__pycache__/
+*.pyc
+
+# SQLite データベース（ローカル用）
+db.sqlite3
+
+# 今後作る可能性があるファイル達
+
+# 環境変数ファイル（SECRET_KEY など） 
+.env
+*.env
+
+# VSCode の設定
+.vscode/
+
+# OS が勝手に作るファイル
+.DS_Store
+Thumbs.db
