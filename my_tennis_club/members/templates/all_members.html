@@ -1,5 +1,14 @@
 <!--members/templates/all_members.html-->
 
+
+<!--
+{#Django テンプレートは “HTML の中に Django の命令を混ぜて書く仕組み#}
+-->
+<!--
+{# 改行して {# #} を HTML コメントの中に入れる形なら安全。
+Django もブラウザも完全に無視する。 #}
+-->
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -8,9 +17,9 @@
  
 <ul>
    {% for x in mymembers %}
-      <li>{{ x.firstname }} {{ x.lastname }}</li>
+      <li>{{x.id}} {{ x.firstname }} {{ x.lastname }}</li>
    {% endfor %} 
-   <!--{% endfor %}これでfor文の終わり-->
+   <!--{# endfor これでfor文の終わり #}これでfor文の終わり-->
 </ul>
     
 </body>
