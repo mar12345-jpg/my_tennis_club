@@ -1,9 +1,25 @@
-# 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
+# 昔の書き方
+
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.template import loader
+from .models import Member
+
+# Create your views here.あなたのビューをここに書いて
+# パスと連動した関数を書く
 
 def members(request):
-    return render(request, 'myfirst.html')
+   mymembers = Member.objects.all().values()
+   template = loader.get_template('all_members.html')
+   # HTMLに渡す辞書データ
+   context = {
+     'mymembers': mymembers,
+   }
+   return HttpResponse(template.render(context, request))
+
+   # # htmlファイルを探す
+   # template = loader.get_template('myfirst.html')
+   # # htmlファイルをデータ化して返信する
+   # return HttpResponse(template.render())
 
 def test(request):
     return HttpResponse("<h2>test テストです！</h2>")
@@ -13,18 +29,13 @@ def hello(request):
     str = f"答え = {ans}"
     return HttpResponse("<h2>test テストです！</h2>")
 
-# 下記は昔の書き方
 
+# # 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
+# from django.http import HttpResponse
 # from django.shortcuts import render
 
-# from django.http import HttpResponse
-# from django.template import loader
-
-# # Create your views here.あなたのビューをここに書いて
-# # パスと連動した関数を書く
-
 # def members(request):
-#    # htmlファイルを探す
-#    template = loader.get_template('myfirst.html')
-#    # htmlファイルをデータ化して返信する
-#    return HttpResponse(template.render())
+#     return render(request, 'myfirst.html')
+
+
+
