@@ -17,8 +17,8 @@ Django もブラウザも完全に無視する。 #}
  
 <ul>
    {% for x in mymembers %}
-      <li>{{x.id}} {{ x.firstname }} {{ x.lastname }}</li>
-   {% endfor %} 
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+   {% endfor %}
    <!--{# endfor これでfor文の終わり #}これでfor文の終わり-->
 </ul>
     
