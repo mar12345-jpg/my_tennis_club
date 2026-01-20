@@ -6,8 +6,13 @@
 -->
 <!--
 {# 改行して {# #} を HTML コメントの中に入れる形なら安全。
+改行すると「両者が完全に独立したコメント」になるため安全
 Django もブラウザも完全に無視する。 #}
 -->
+{% comment %}
+コメントアウトこれつかっていってね
+中に何かいても全部Djangoの段階で無視
+{% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -19,7 +24,9 @@ Django もブラウザも完全に無視する。 #}
    {% for x in mymembers %}
       <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
    {% endfor %}
-   <!--{# endfor これでfor文の終わり #}これでfor文の終わり-->
+   <!--
+   {# endfor これでfor文の終わり #}これでfor文の終わり
+   -->
 </ul>
     
 </body>

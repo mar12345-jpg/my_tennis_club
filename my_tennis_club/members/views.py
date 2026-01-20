@@ -16,7 +16,9 @@ def members(request):
    }
    return HttpResponse(template.render(context, request))
 
+# 個人データを表示
 def details(request, id):
+   # idで検索して１件のレコードを取得
    mymember = Member.objects.get(id=id)
    template = loader.get_template('details.html')
    context = {
