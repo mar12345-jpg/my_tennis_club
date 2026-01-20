@@ -1,10 +1,17 @@
-# 今の書き方　短いよ
-
+# 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
+from django.http import HttpResponse
 from django.shortcuts import render
 
 def members(request):
     return render(request, 'myfirst.html')
 
+def test(request):
+    return HttpResponse("<h2>test テストです！</h2>")
+
+def hello(request):
+    ans = 12*2
+    str = f"答え = {ans}"
+    return HttpResponse("<h2>test テストです！</h2>")
 
 # 下記は昔の書き方
 
