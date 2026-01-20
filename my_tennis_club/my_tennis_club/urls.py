@@ -14,10 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# サイト全体のURL指定をやるところ
 from django.contrib import admin
 from django.urls import include, path
-    
+
 urlpatterns = [
-   path('', include('members.urls')),
-   path('admin/', admin.site.urls),
+    # ''空文字にしておくとhttps://ドメイン名/のみでアクセスできる。入れるとhttps://ドメイン名/入れたやつ/になる
+    path('', include('members.urls')),
+    path('admin/', admin.site.urls),
 ]

@@ -6,16 +6,16 @@ venv/
 __pycache__/
 *.pyc
 
-# SQLite データベース（ローカル用）
+# SQLite データベース（ローカル用） チーム開発では共有しないのが普通
 db.sqlite3
 
 # 今後作る可能性があるファイル達
 
-# 環境変数ファイル（SECRET_KEY など） 
+# 環境変数ファイル（SECRET_KEY など） Django の SECRET_KEY や DB パスワードを入れるやつ
 .env
 *.env
 
-# VSCode の設定
+# VSCode の設定 個人環境の設定
 .vscode/
 
 # OS が勝手に作るファイル
