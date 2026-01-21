@@ -14,20 +14,34 @@ Django もブラウザも完全に無視する。 #}
 中に何かいても全部Djangoの段階で無視
 {% endcomment %}
 
+{% extends "master.html" %}
+
+<!--
 <!DOCTYPE html>
 <html>
 <body>
+master.htmlが持ってて、それを継承したから書かなくてよくなる
+   -->
+    {% block title %}
+    My Tennis Club - List of all members
+    {% endblock %}
     
+{% block content %}
 <h1>Members</h1>
  
 <ul>
    {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+      <li>
+         <a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a>
+      </li>
    {% endfor %}
    <!--
    {# endfor これでfor文の終わり #}これでfor文の終わり
    -->
 </ul>
-    
+
+{% endblock %}
+<!--
 </body>
 </html>
+-->
