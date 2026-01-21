@@ -26,6 +26,10 @@ def details(request, id):
    }
    return HttpResponse(template.render(context, request))
 
+def main(request):
+   template = loader.get_template('main.html')
+   return HttpResponse(template.render())
+
    # # htmlファイルを探す
    # template = loader.get_template('myfirst.html')
    # # htmlファイルをデータ化して返信する
