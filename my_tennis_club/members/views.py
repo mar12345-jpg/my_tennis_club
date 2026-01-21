@@ -33,7 +33,9 @@ def main(request):
 def testing(request):
    template = loader.get_template('template.html')
    context = {
+            # {{キー名}}
           'firstname': 'Linus',
+          'price': 1200,
     }
    return HttpResponse(template.render(context, request))
 
