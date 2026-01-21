@@ -55,6 +55,10 @@ def hello(request):
     str = f"答え = {ans}"
     return HttpResponse("<h2>test テストです！</h2>")
 
+def mypage(request):
+   template = loader.get_template('mypage.html')
+   return HttpResponse(template.render())
+
 
 # # 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
 # from django.http import HttpResponse
