@@ -1,3 +1,5 @@
+{% extends "master.html" %}
+
 <!--members/templates/all_members.html-->
 
 
@@ -9,12 +11,11 @@
 改行すると「両者が完全に独立したコメント」になるため安全
 Django もブラウザも完全に無視する。 #}
 -->
+
 {% comment %}
 コメントアウトこれつかっていってね
 中に何かいても全部Djangoの段階で無視
 {% endcomment %}
-
-{% extends "master.html" %}
 
 <!--
 <!DOCTYPE html>
@@ -22,9 +23,10 @@ Django もブラウザも完全に無視する。 #}
 <body>
 master.htmlが持ってて、それを継承したから書かなくてよくなる
    -->
-    {% block title %}
-    My Tennis Club - List of all members
-    {% endblock %}
+
+{% block title %}
+My Tennis Club - List of all members
+{% endblock %}
     
 {% block content %}
 <h1>Members</h1>
