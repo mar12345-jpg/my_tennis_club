@@ -27,5 +27,11 @@
    {% endif %}
 {% endwith %}
 
+{% for x in emptytestobject %}
+<li>{{ x.firstname }}</li>
+{% empty %}
+<li>No members</li>
+{% endfor %}
+
 </body>
 </html>

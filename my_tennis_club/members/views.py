@@ -37,6 +37,7 @@ def testing(request):
           'firstname': 'Linus',
           'price': 1200,
           'greeting': 1,
+          'emptytestobject': [],
     }
    return HttpResponse(template.render(context, request))
 
