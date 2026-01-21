@@ -38,6 +38,7 @@ def testing(request):
           'price': 1200,
           'greeting': 1,
           'emptytestobject': [],
+          'fruits': ['Apple', 'Banana', 'Cherry', 'Oranges', 'Kiwi'],
     }
    return HttpResponse(template.render(context, request))
 

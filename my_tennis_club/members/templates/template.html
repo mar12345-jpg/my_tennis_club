@@ -33,5 +33,9 @@
 <li>No members</li>
 {% endfor %}
 
+  {% for x in fruits %}
+    <li>{{ forloop.counter0 }} {{x}}</li>
+  {% endfor %}
+
 </body>
 </html>
