@@ -37,5 +37,13 @@
     <li>{{ forloop.counter0 }} {{x}}</li>
   {% endfor %}
 
+{% for x in fruits %}
+<li
+{% if forloop.first %}
+    style='background-color:lightblue;'
+{% endif %}
+>{{ x }}</li>
+{% endfor %}
+
 </body>
 </html>
