@@ -56,8 +56,14 @@ def hello(request):
     return HttpResponse("<h2>test テストです！</h2>")
 
 def mypage(request):
-   template = loader.get_template('mypage.html')
-   return HttpResponse(template.render())
+    template = loader.get_template('mypage.html')
+    context = {
+        'username': 'Taro',
+        'age': 25,
+        'message': 'ようこそ、マイページへ！',
+    }
+
+    return HttpResponse(template.render(context, request))
 
 
 # # 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
