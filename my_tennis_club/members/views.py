@@ -36,6 +36,7 @@ def testing(request):
             # {{キー名}}
           'firstname': 'Linus',
           'price': 1200,
+          'greeting': 1,
     }
    return HttpResponse(template.render(context, request))
 
