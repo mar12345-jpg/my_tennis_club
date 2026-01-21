@@ -9,16 +9,24 @@
 {% endblock %}
 
 {% block content %}
-   <h1>転職転職</h1>
-   
-   <h1>{{ username }} さんのページ</h1>
+    <div class="mypage-container">
 
-    <p>年齢：{{ age }}</p>
+        <h1 class="page-title">転職転職</h1>
 
-    <p>{{ message }}</p>
+        <div class="profile-card">
+            <h2 class="username">{{ username }} さんのページ</h2>
 
-    <h3>いいとこあるかな？</h3>
-    
-    <p>Check out all our<a href="members/">members</a></p>
-    
+            <p class="profile-item">年齢：<span>{{ age }}</span></p>
+            <p class="profile-item">{{ message }}</p>
+        </div>
+
+        <h3 class="sub-title">いいとこあるかな？</h3>
+
+        <p class="link-area">
+            Check out all our
+            <a class="cute-link" href="members/">members</a>
+        </p>
+
+    </div>
 {% endblock %}
+

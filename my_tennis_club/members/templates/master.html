@@ -4,6 +4,80 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
+        <style>
+        /* ゆめかわ背景（淡いグラデーション） */
+        body {
+            background: linear-gradient(135deg, #ffe6fa, #e6f0ff, #fff7e6);
+            background-attachment: fixed;
+            font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+            color: #555;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 全体のコンテナ（ふわっと浮く感じ） */
+        .mypage-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.35);
+        }
+
+        /* タイトル（ゆめかわピンク） */
+        .page-title {
+            text-align: center;
+            color: #ff7ac8;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255, 150, 200, 0.5);
+        }
+
+        /* プロフィールカード */
+        .profile-card {
+            background: #ffe6f3;
+            padding: 20px;
+            border-radius: 16px;
+            border: 2px solid #ffb6d4;
+            box-shadow: 0 4px 12px rgba(255, 150, 200, 0.25);
+            margin-bottom: 30px;
+        }
+
+        .username {
+            color: #ff4fa8;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .profile-item {
+            font-size: 1.1rem;
+            margin: 6px 0;
+        }
+
+        /* サブタイトル */
+        .sub-title {
+            color: #ff7ac8;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+
+        /* リンク（ゆめかわドット線） */
+        .cute-link {
+            color: #ff4fa8;
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px dotted #ff4fa8;
+            transition: 0.2s;
+        }
+
+        .cute-link:hover {
+            color: #ff2f7a;
+            border-bottom-color: #ff2f7a;
+        }
+    </style>
+
 </head>
 <body>
     {% block header %}
