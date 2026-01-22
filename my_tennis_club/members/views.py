@@ -53,7 +53,7 @@ def test(request):
 def hello(request):
     ans = 12*2
     str = f"答え = {ans}"
-    return HttpResponse("<h2>test テストです！</h2>")
+    return HttpResponse(str)
 
 def mypage(request):
     template = loader.get_template('mypage.html')
@@ -62,7 +62,6 @@ def mypage(request):
         'age': 25,
         'message': 'ようこそ、マイページへ！',
     }
-
     return HttpResponse(template.render(context, request))
 
 
