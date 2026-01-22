@@ -1,0 +1,12 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="user_name">名前を入れてね：</label>
+    <input type="text" id="user_name" name="your_name">
+    <button type="submit">送信</button>
+</form>
+
+<hr>
+
+{% if display_name %}
+    <h2>こんにちは、{{ display_name }} さん！</h2>
+{% endif %}

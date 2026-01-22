@@ -86,6 +86,18 @@ def get_post(request):
     # get_post.html を表示し、context の内容をテンプレートに渡す
     return render(request, 'get_post.html', context)
 
+def nameform(request):
+    display_name = None
+
+    if request.method == 'POST':
+        display_name = request.POST.get('your_name')
+
+    context = {
+        'display_name': display_name,
+    }
+    
+    return render(request, 'nameform.html', context)
+
 
 # # 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
 # from django.http import HttpResponse

@@ -14,4 +14,5 @@ urlpatterns = [
     path('members/mypage/', views.mypage, name='mypage'),
     # /members/get_post/ にアクセスしたとき get_post 関数を呼び出す
     path('get_post/', views.get_post, name='get_post'),
+    path('nameform/', views.nameform, name='nameform'),
 ]
