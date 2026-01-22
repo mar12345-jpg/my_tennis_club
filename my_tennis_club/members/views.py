@@ -88,13 +88,14 @@ def get_post(request):
 
 def nameform(request):
     display_name = None
-    
+    display_email = None
     # フォームに入力されたデータの取得
     if request.method == 'POST':
         display_name = request.POST.get('your_name')
-
+        display_email = request.POST.get('your_email')
     context = {
         'display_name': display_name,
+        'display_email': display_email,
     }
     
     return render(request, 'nameform.html', context)
