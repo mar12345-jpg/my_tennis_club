@@ -88,7 +88,8 @@ def get_post(request):
 
 def nameform(request):
     display_name = None
-
+    
+    # フォームに入力されたデータの取得
     if request.method == 'POST':
         display_name = request.POST.get('your_name')
 
