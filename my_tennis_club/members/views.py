@@ -2,8 +2,11 @@
 
 from django.http import HttpResponse
 from django.template import loader
+
 from .models import Member
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .forms import MemberModelForm
+
 
 # Create your views here.あなたのビューをここに書いて
 # パスと連動した関数を書く
@@ -100,6 +103,16 @@ def nameform(request):
     
     return render(request, 'nameform.html', context)
 
+
+def add_member_modelform(request):
+    # POSTデータを直接フォームに渡す
+    form = MemberModelForm(request.POST or None)
+    
+    if request.method == 'POST' and form.is_valid():
+        form.save() # これだけでDBへのInsertが完了！
+        return redirect('members')
+        
+    return render(request, 'add_modelform.html', {'form': form})
 
 # # 今の書き方　テンプレート読み込み → レンダリング → レスポンス をまとめて実行
 # from django.http import HttpResponse
